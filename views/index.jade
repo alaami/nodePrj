@@ -1,0 +1,97 @@
+!!!
+html
+  head
+    title Carnet d'Adresses
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script(src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js')
+    script(src='./javascripts/index.js')
+  body
+    div#header_container
+      h1 Carnet d'adresses
+    div#main 
+     div#recherche
+      h3 Recherche
+        input#recherche_input(type='text', class="style_input", placeholder='Nom, Prénom, Organisation')
+        button#recherche_(type='button') Rechercher
+      div#resultatRecherche
+        p.info
+               | Cliquez sur "Ajouter un contact" ou cliquez sur les contacts de votre liste pour gérer votre carnet d'adresse 
+        br 
+       h3 
+        a#ajouterBouton(href='#') Ajouter un contact
+     div#ajouter
+        p.info
+                  | les informations avec 
+                  span &#1645
+                  |  sont abligatoires
+        input#homme(type='radio', name='sexe', value='Homme')
+        label Homme
+        input#femme(type='radio', name='sexe', value='Femme') 
+        label Femme
+        br
+        br
+        label Nom : 
+        span &#1645
+        input#nom(type='text' , name='nom')
+        br
+        label Prénom  :
+        span &#1645
+        input#prenom(type='text' , name='prenom')
+        br
+        label Titre :
+        input#titre(type='text' , name='titre')
+        br
+        label Organisation :
+        span &#1645
+        input#org(type='text' , name='organisation')
+        br
+        label Profession :
+        input#job(type='text' , name='profession')
+        br
+        label Date de naissance :
+        input#naissance(type='text', placeholder='AAAA/MM/JJ', name='naissance')
+        br
+        br
+        img#logoAdd(src='../images/Icone.png')
+        label Numéro de téléphone :
+        button#telephone Ajouter 
+        div#liste-telephone
+        br
+        img#logoAdd(src='../images/adresse.jpg')
+        label Courriel :
+        button#courriel Ajouter
+        div#liste-courriel 
+        br 
+        img#logoAdd(src='../images/Home.png')
+        label Adresse :
+        button#adresse Ajouter
+        div#liste-adresse
+        br
+        img#logoAdd(src='../images/we.png')
+        label Site web :
+        button#website Ajouter
+        div#liste-website
+        br
+        img#logoAdd(src='../images/date.jpg')
+        label Date importante :
+        button#dateImportante Ajouter
+        div#liste-date
+        br
+        td
+              | Notes additionnelles:
+              br
+              textarea#noteAdditionnelle(placeholder='Entrez votre description ici...')
+        br
+        button#sendform Ajouter  
+        br
+      h3
+       a#listeContact(href='#')  Liste de contact
+       p.info
+               | Cliquez sur un contact pour voir sa fiche. 
+     div#liste
+      div#fiche
+      div#fiche_modif
+    div#footer 
+       h3  Carnet d'adresses - @ 2013
